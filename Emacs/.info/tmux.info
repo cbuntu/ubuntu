@@ -1,0 +1,74 @@
+
+File: tmux.info,  Node: Top,  Next: Basics,  Up: (dir)
+
+Tmux
+****
+
+  what is Tmux?
+
+  tmux is a terminal multiplexer. It lets us use a single environment to launch
+multiple terminals, or windows, each running its own process or program.
+For example, we can launch tmux and load up the Vim text editor. We can
+then create a new window, load up a database console, and switch back and
+forth between these programs all within a single session.
+
+  If you use a modern operating system and a terminal that has tabs, this
+doesn’t sound like anything new. But running multiple programs simultane-
+ously is only one of tmux’s features. We can divide windows into horizontal
+or vertical panes, which means we can run two or more programs on the
+same screen side by side. And we can do it all without using the mouse.
+
+  We can also detach from a session, meaning we can leave our environment
+running in the background. If you’ve used GNU-Screen before, you’re familiar
+with this feature. In many ways, tmux is like GNU-Screen with a lot of extra
+features, and a much simpler configuration system. And since tmux uses a
+client-server model, we can control windows and panes from a central location,
+or even jump between multiple sessions from a single terminal window. This
+client-server model also lets us create scripts and interact with tmux from
+other windows or applications
+
+  Conventions
+
+  tmux is a tool that’s driven by the keyboard. You’ll encounter many keyboard
+shortcuts throughout the book. Since tmux supports both lower- and upper-
+case keyboard shortcuts, it may sometimes be unclear which key the book
+is referencing.
+
+To keep it simple, these are the conventions I’ve used.
+
+  • C TRL - b means “press the C TRL and b keys simultaneously.”
+
+  • C TRL - R means the same thing, except that you’ll need to use the S HIFT key
+to produce the capital “R.” I won’t explicitly show the S HIFT key in any of
+these keystrokes.
+
+  • C TRL - b d means “press the C ONTROL and b keys simultaneously, then release,
+and then press d .” In Chapter 1, Learning The Basics, on page 1, you’ll
+learn about the command prefix, which will use this notation, but short-
+ened to P REFIX d .
+
+  • Finally, I’ll show some terminal commands throughout the book, like
+
+    $ tmux new-session
+
+The dollar sign is simply the prompt from the shell session and you won’t
+need to type it when you type the command.
+
+
+* Menu:
+
+* Basics::		Learning the Basics.
+* Configuring::		Configuring Tmux.
+* Customized Tmux::	Scripting Customized Tmux Environment.
+* Text and Buffers::	Working with Text and Buffers.
+* Pair Programming::	Pair Programming with Tmux.
+* Workflows::		Workflows.
+* Our Configuring::	Our Configuring for Tmux.
+
+
+File: tmux.info,  Node: Basics,  Next: Configuring,  Prev: Top,  Up: Top
+
+Learning the Bascis
+*******************
+
+Basics

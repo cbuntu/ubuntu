@@ -1,0 +1,287 @@
+
+====================Linux Command Intro begin==============
+Usefull Linux Command:
+
+* Configure grub ubuntu 16.04
+	modify this line
+	GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+	into
+	GRUB_CMDLINE_LINUX_DEFAULT="text"
+
+	don't use comment #
+	GRUB_TERMINAL=console
+
+	start desktop
+	$ sudo service lightdm start/restart/stop
+	or
+	$ sudo systemctl start/restart/stop lightdm
+
+	grub into tty for ubuntu 16.04
+	$ sudo systemctl set-default multi-user.target
+
+	update grub
+	$ sudo update-grub
+
+	grub into desktop for ubuntu 16.04
+	$ sudo systemctl set-default graphical.target
+
+
+* Kill other user
+	$ sudo skill -KILL -u user
+	or
+	$ sudo pkill -KILL -u user
+
+* VBoxManage Command
+	** List vms
+		$ VBoxManage list vms
+	** List running vms
+		$ VBoxManage list runningvms
+	** Start vm in headless mode
+		$ VBoxManage startvm "vm name" --type headless
+	** Close vm
+		$ VBoxManage controlvm "vm name" acpipowerbutton
+
+* Editor sudoers
+	# visudo
+
+* Save Vim in sudo mode
+	:w ! sudo tee %
+
+* SSH-Key
+	** generate ssh-key
+		$ ssh-keygen
+	** copy ssh-key to server
+		$ ssh-copy-id user@serverip
+	** conection to server without password
+		$ ssh user@serverip		//can use alias in .bashrc
+
+* Active .bashrc
+	$ source .bashrc
+
+* Swapoff
+	$ sudo swapoff -a && swapon -a
+
+* Add user
+	* Add group
+		$ sudo groupadd students
+	* add user
+		$ sudo useradd -s /bin/bash -g students -G sudo -m zcb
+
+* Del user
+	$ userdel zcb
+
+* system file for user
+	* /etc/passwd
+	* /etc/group
+	* /etc/shadow
+
+
+
+====================Linux Command Intro begin==============
+
+
+====================w3m Intro begin===================
+* Install
+	$ sudo apt install w3m [w3m-img]
+
+* Open a web
+	$ w3m http://www.baidu.com
+
+** In the w3m:
+
+* Open help
+	H
+
+* Go back last page
+	B
+
+* Have a look history url
+	C-h
+
+* Type your define url
+	U
+
+* Last page of screen
+	b
+
+* Next page of screen
+	spaceback
+
+* Add into bookmarks
+	[Esc]a / A-a
+
+* List bookmarks
+	[Esc]b / A-b
+
+* Search forwoard
+	/,C-s
+
+* Search backwoard
+	?, C-r
+
+* Run outside command
+	!
+
+* Setting
+	o
+
+* Stop
+	C-c
+
+* Over(Exit)
+	C-z
+
+* Exit
+	q  /  Q
+
+====================w3m Intro end=====================
+
+
+====================Ttyrec Intro begin===================
+* ttyrec is a tty recorder.
+
+* record the tty action
+	$ ttyrec [default=ttyrecord,/path/filename]
+		the default filename is ttyrecord, or is /path/filename.
+	
+* exit the record
+	$ exit
+	
+* playback
+	$ ttyplay [default=ttyrecord,/path/filename]
+		
+		"+" or f speed up the playback twice.
+		"-" or s speed down the playback twice.
+		"1" change the playback to the normal speed.
+
+* ttyrec time
+	$ ttytime [default=ttyrecord,/path/filename]
+
+====================Ttyrec Intro end=====================
+
+
+====================Docker Intro begin===================
+* docker info
+	$ sudo docker info
+
+* check docker's version
+	$ sudo docker --version
+	$ sudo docker version
+
+* check docker's status
+	$ sudo systemctl status docker
+
+* start/restart docker daemon
+	$ sudo systemctl start/restart docker
+	$ sudo service docker start/restart
+
+* stop docker daemon
+	$ sudo systemctl stop docker
+	$ sudo service docker stop
+
+* remove old docker
+	$ sudo apt remove docker docker-engine
+
+* install docker
+	$ sudo apt install docker.io
+
+* search docker images
+	$ sudo docker search ubuntu:16.04
+
+* download docker's images to local
+	$ sudo docker pull uubntu:16.04
+
+* list local docker's images
+	$ sudo docker images
+
+* list all docker's images(middle layout images)
+	$ sudo docker images -a
+
+* list part of docker's images
+	$ sudo docker images ubuntu
+
+* remove local docker's images
+	$ sudo docker rmi ubuntu:16.04		//can use three of images's ID instead of images's name
+
+* run a docker's container and exec command
+	$ sudo docker run ubuntu:16.04 echo "Hello, World!"
+
+* run docker's container use -it --rm
+	$ sudo docker run -it --rm ubuntu:16.04 bash
+		-i : interaction
+		-t: Terminal
+		--rm: remove changed when the container exit
+		ubuntu:16.04: the base images, also can use the image's ID
+		bash: the command follow the image
+		-d: run the container in background,for into the container：docker attach image's name or ID
+
+* exit docker's container
+	exit or ctrl + d
+
+* list all of docker's container
+	$ sudo docker ps -a
+
+* list all of running docker's container
+	$ sudo docker ps
+
+* start or restart the stopped docker's container
+	$ sudo docker start/restart tender_hugle		//or container's ID 001
+
+* stop the running container
+	$ sudo docker stop tender_hugle
+
+* exec the running container
+	$ sudo docker exec -it 001 bash
+
+* remove the stopped container
+	$ sudo docker rm tender_hugle/001
+
+* remove the running container force
+	$ sudo docker rm -f tender_hugle/001
+
+* remove all container which stopped or running
+	$ sudo docker rm $(sudo docker ps -a -q)		//rm -f for the running
+
+====================Docker Intro end=====================
+
+
+====================LXD 2.0 Intro end=====================
+* Install LXD
+	if you use Ubuntu 16.04
+	$ sudo apt install lxd
+
+* Install ZFS on Ubuntu 16.04
+	$ sudo apt install zfsutils-linux
+
+* Configure LXD to use it
+	$ sudo lxd init
+
+* * Configure LXD to use it
+	$ sudo lxd init
+
+* * Configure LXD to use it
+	$ sudo lxd init
+
+* * Configure LXD to use it
+	$ sudo lxd init
+
+* * Configure LXD to use it
+	$ sudo lxd init
+
+* * Configure LXD to use it
+	$ sudo lxd init
+
+* * Configure LXD to use it
+	$ sudo lxd init
+
+* * Configure LXD to use it
+	$ sudo lxd init
+
+* 
+
+
+
+
+
+
+====================LXD 2.0 Intro end=====================

@@ -1,0 +1,181 @@
+Filename:	resource.info
+Author:		Cbuntu
+Version:	0.0.1
+Content:	The resource for learn computer, such as the address of a web for computer
+
+
+File: resource.info,  Node: Top,  Up: (dir)
+
+Resource For Computer
+*********************
+
+* Menu:
+
+* Google::					https://www.google.com/
+* BBC::						http://www.bbc.com
+* GitHub::					https://github.com
+* GitBook::					https://www.gitbook.com
+* GitOSChina::				http://git.oschina.net/progit/
+* WikiPedia::				https://en.wikipedia.org/wiki/Main_Page
+* Youtobe::					https://www.youtube.com
+* FaceBook::				https://www.facebook.com
+* TED::						http://www.ted.com
+* NOEX::					http://noexcuselist.com
+
+Linux:
+* Linux Kernel::			https://www.kernel.org
+* Linux Kernel Doc::		https://www.kernel.org/doc
+* Distro Watch::			http://distrowatch.com
+* Linux Foundation::		https://www.linuxfoundation.org
+* GNU::						https://www.gnu.org
+* LinuxJourney::			https://linuxjourney.com
+* LinuxNewBieGuide::		http://linuxnewbieguide.org
+* AdvancedLinuxm::			http://advancedlinuxprogramming.com
+* LinuxFromScratch::		http://linuxfromscratch.org
+* LinuxCommand::			http://linuxcommand.org
+* TheGeekStuff::			http://www.thegeekstuff.com
+* Mingw::					http://mingw.org
+* Cygwin::					http://cygwin.org
+* Open Source::				https://opensource.com
+* Linux Container::			https://linuxcontainers.org
+* Linux Org::				http://www.linux.org
+* Linux Forum::				https://www.linuxforum.com
+* Linux Document::			http://www.tldp.org
+* LinuxSurvival::			http://linuxsurvival.com
+* Linux Communation_zh::	https://linux.cn
+* Linuxmint Forums::		https://forums.linuxmint.com
+* Linux.com::				https://www.linux.com
+* GnomeLook::				https://www.gnome-look.org/browse/ord/latest/
+* QT::						https://www.qt.io
+* EDX::						https://www.edx.org
+* DowntoEarthLinux::		http://downtoearthlinux.com
+* NonGnu::					http://savannah.nongnu.org
+* Stgraber::				https://stgraber.org/
+* Docker::					https://www.docker.com
+* Tecmint::					http://www.tecmint.com/
+* Howtoforge::				https://www.howtoforge.com/
+
+Ubuntu:
+* Canonical::				https://www.canonical.com
+* Launchpad::				https://launchpad.net
+* Ubuntu::					https://www.ubuntu.com/global
+* Ubuntu Wiki::				https://wiki.ubuntu.com
+* Ubuntu Help::				https://help.ubuntu.com
+* AskUbuntu::				https://askubuntu.com
+* Ubuntu Forums::			https://ubuntuforums.org
+* Ubuntu Developer::		https://developer.ubuntu.com/en
+* Ubuntu Discourse::		http://discourse.ubuntu.com
+* Ubuntukylin::				http://www.ubuntukylin.com
+* OmgUbuntu::				http://www.omgubuntu.co.uk
+* Ubuntu-Manual::			http://ubuntu-manual.org
+* Snap::					https://snapcraft.io
+
+Other Linux:
+* RedHat::					https://www.redhat.com/en
+* Debian::					https://www.debian.org
+* Linux Mint::				https://www.linuxmint.com
+* Arch Linux::				https://www.archlinux.org
+* Fedora::					https://getfedora.org
+* Fedoradoc::				https://docs.fedoraproject.org/en-US/index.html
+* OpenSuse::				https://en.opensuse.org/Main_Page
+
+Unix:
+* Unix::					http://www.unix.com
+* Unix Tutorial::			http://www.ee.surrey.ac.uk/Teaching/Unix/
+
+BSD:
+* BSD::						http://www.bsd.org
+* BSD::						http://www.bsdsoftlink.com
+* FreeBsd::					https://www.freebsd.org
+* FreeBsdDoc::				https://www.freebsd.org/doc/
+* OpenBsd::					http://www.openbsd.org
+* PCBsd::					http://www.pcbsd.org
+* BsdConsulting::			http://www.bsdconsulting.com
+
+Web Developing:
+* Mozilla Foundation::		https://developer.mozilla.org
+* Learn Mozilla::			https://learning.mozilla.org/en-US/
+* SitePoint::				https://www.sitepoint.com
+* Code::  					https://code.org
+* Freecodecamp::			https://www.freecodecamp.com
+* Sass::  					http://sass-lang.com
+* Lesscss::					http://lesscss.org
+* Zurb Foundation::			http://foundation.zurb.com
+* W3school::				http://www.w3school.com.cn
+* W3school::				http://www.w3cschool.cn
+* Runoob::					http://www.runoob.com
+* W3C::						https://www.w3.org
+* Oracle::					https://www.oracle.com/index.html
+* Xampp::					https://www.apachefriends.org/index.html
+* Apache::					http://www.apache.org
+* MySql::					http://www.mysql.com
+* PostgreSql::				https://www.postgresql.org
+* Laravel::					https://laravel.com
+* Laravel_zh_CN::			http://www.golaravel.com
+* Laravelacademy::			http://laravelacademy.org
+* Zend FrameWork::			https://framework.zend.com
+* Bootstrap::				http://getbootstrap.com
+* BootStrap::				http://www.bootcss.com
+* BootStrap::				http://v2.bootcss.com
+* Reactjs::					https://facebook.github.io/react/
+* Angularjs::				https://angularjs.org
+
+Languages:
+* JavaScript::				https://www.javascript.com
+* Jquery::					http://jquery.com
+* Java::					https://www.java.com/en/
+* Json::					http://www.json.org
+* Nodejs::					https://nodejs.org/en
+* PHP::						http://www.php.net
+* Build your own lisp::		http://buildyourownlisp.com
+* C Plus Plus::				http://www.cplusplus.com
+* Python::					https://www.python.org
+* Ruby::					http://www.ruby-lang.org/en
+* Mono::					http://www.mono-project.com
+* Stackoverflow::			http://stackoverflow.com
+
+Learn To Code:
+* Codecademy::				https://www.codecademy.com
+* Tutorialspoint::			https://www.tutorialspoint.com
+* ShiYanLou::				https://www.shiyanlou.com
+
+Windows:
+* Microsoft::				https://www.microsoft.com/en-us
+* Microsoft Developer::		https://developer.microsoft.com/en-us/
+* Microsoft Community::		https://answers.microsoft.com/en-us/
+* DOC Microsoft::			https://docs.microsoft.com/en-us/
+* Windows-Info::			http://www.windows-info.de
+* Windows PHP::				http://windows.php.net
+
+Mac:
+* Apple::					http://www.apple.com
+* Apple Developer::			https://developer.apple.com
+* Swift::					https://swift.org
+
+Android:
+* Android::					https://www.android.com
+* Android Developer::		https://developer.android.com/index.html
+
+SoftWare:
+* Vim::						http://www.vim.org
+* GnuEmacs::				http://www.gnuemacs.org
+* Visual Studio Code::		https://code.visualstudio.com
+* Sublime Text::			http://www.sublimetext.com
+* Atom::  					https://atom.io
+* Notepad::					https://notepad-plus-plus.org
+* Eclipse::					https://www.eclipse.org
+* Jetbrains::				http://www.jetbrains.com
+* OpenSSH::					http://www.openssh.com
+* Filezilla::				https://filezilla-project.org
+* Gimp::					https://www.gimp.org
+* Inkscape::				https://inkscape.org/en
+* LibreOffice::				http://www.libreoffice.org
+* Google Chrome::			https://www.chromium.org
+* Ardour::					http://ardour.org
+* Grunt::					http://gruntjs.com
+* Gulp::					http://gulpjs.com/
+
+Ebooks:
+* Allitebooks::				http://www.allitebooks.com
+* KanCloud::				http://www.kancloud.cn/explore
+* TechOnTheNet::			https://www.techonthenet.com

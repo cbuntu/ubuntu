@@ -1,0 +1,18 @@
+*ubuntu.txt*
+
+1.SSH的安装与配置
+	a.SSH的安装：
+	 	Redhat、CentOS使用RPM包的发行版
+			~$: yum install openssh-server openssh-clients
+		Debian、Ubuntu等使用DEB包的发行版
+			~$: sudo apt-get install openssh-server openssh-client
+		Windows操作系统下
+			PuTTY、Xshell、SecureCRT、Plink、WinScp等
+	b.SSH的配置	
+		Linux下SSH的配置文件默认路径为
+		/etc/ssh
+		其中：ssh_config是客户端的配置文件，sshd_config是服务器端的配置文件
+		sshd_config文件中：
+			Port 22		#SSH端口设置，默认是使用22端口
+			Protocol 2, 1	#选择SSH协议版本，支持2,1两版本
+			ListenAddress 0.0.0.0	#监听的网卡的IP

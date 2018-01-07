@@ -1,0 +1,105 @@
+ping -c 3 www.baidu.com
+efivar -l
+fdisk -l
+
+fdisk /dev/sda
+n
+p
++2G
+n
+p
+[Enter]
+w
+
+cat /proc/partitions
+
+mkfs.ext4 /dev/sda2
+mkswap /dev/sda1
+swapon /dev/sda1
+
+mount /dev/sda2 /mnt
+	if mount others, such as /home, /boot, /var, do as:
+		mkdir /mnt/home /mnt/boot /mnt/var
+		mount /dev/sda3/4/5 /mnt/home ......
+
+vi /etc/pacman.d/mirrorlist
+	put your mirror first
+
+pacman -Syy
+pacstrap -i /mnt base base-devel
+
+genfstab -U -p /mnt >> /mnt/etc/fstab
+arch-chroot /mnt /bin/bash
+
+vi /etc/locale.gen
+	remove # frome en_US.UTF-8 zh_*
+locale-gen
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+export LANG=en_US.UTF-8
+
+rm -rf /etc/localtime
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+hwclock --systohc --utc
+
+echo myhostname > /etc/hostname
+vi /etc/hosts
+	editor hostname
+
+ip link
+systemctl enable dhcpcd@interfacename.service
+
+passwd root
+
+useradd -m -g users -G wheel -s /bin/bash myusername
+passwd myusername
+
+pacman -S vim net-tools openssh
+
+visudo
+	myusername ALL(ALL:ALL)=ALL
+
+systemctl enable sshd.service
+
+pacman -S grub os-prober
+grub-install --target=i386-pc --recheck /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+
+exit
+umount /mnt[/home /mnt/var /mnt/boot]
+reboot
+
+======================================
+Install the GUI
+
+sudo pacman -Syu
+sudo pacman -S xorg xorg-server
+
+# xfce4 desktop
+sudo pacman -S xfce4 xfce4-goodies
+
+# budgie desktop
+sudo pacman -S budgie-desktop
+
+# gnome desktop
+sudo pacman -S gnome gnome-extra
+
+# cinnamon desktop
+sudo pacman -S cinnamon nemo-fileroller
+
+# kde desktop
+sudo pacman -S plasma
+
+# mate desktop
+sudo pacman -S mate mate-extra
+
+# deepin desktop
+sudo pacman -S deepin deepin-extra
+
+# enlightenment desktop
+sudo pacman -S enlightenment
+
+# lxde desktop
+sudo pacman -S lxde
+
+# lxqt desktop
+sudo pacman -S lxqt
