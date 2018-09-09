@@ -221,6 +221,7 @@
 
 	" Vimcdoc {
 	
+		let g:loaded_vimcdoc = 1
 		set helplang=en
 
 	" }
