@@ -236,7 +236,7 @@
 		let g:pymode_doc_bind = 'K'
 		
 		let g:pymode_run = 1
-		let g:pymode_run_bind = '<C-r>r'
+		let g:pymode_run_bind = '<C-c>r'
 
 	" }
 	
