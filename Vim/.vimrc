@@ -69,6 +69,7 @@
 
 		set background=dark
 		"colorscheme wombat
+		"colorscheme wasabi256
 		colorscheme hybrid
 
 		set nocp
