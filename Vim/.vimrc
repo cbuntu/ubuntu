@@ -45,7 +45,9 @@
 		Plugin 'flazz/vim-colorschemes'
 		Plugin 'yianwillis/vimcdoc'
 		Plugin 'python-mode/python-mode'
-		Plugin 'vim-syntastic/syntastic'
+		"Plugin 'w0ng/vim-hybrid'
+		"Plugin 'vim-syntastic/syntastic'
+		"Plugin 'yggdroot/indentline'
 
 	" }
 
@@ -65,7 +67,9 @@
 		"set relativenumber
 		set numberwidth=1
 
-		colorscheme wombat
+		set background=dark
+		"colorscheme wombat
+		colorscheme hybrid
 
 		set nocp
 		filetype indent on
@@ -114,6 +118,14 @@
 		cmap W w !sudo tee % >/dev/null<CR>
 
 		nmap <F2> :source $MYVIMRC<CR>
+
+		map <F10> :call Uflash()<CR>
+		func! Uflash()
+			exec "w"
+			if &filetype == 'python'
+				exec "!uflash %"
+			endif
+		endfunc
 		
 		map <F5> :call CompileRunGcc()<CR>
 		func! CompileRunGcc()
@@ -130,7 +142,7 @@
 			elseif &filetype == 'sh'
 				:!time bash %
 			elseif &filetype == 'python'
-				exec "!time python3.5 %"
+				exec "!time python3.6 %"
 		    	elseif &filetype == 'html'
 				exec "!firefox % &"
 		    	elseif &filetype == 'go'
@@ -199,7 +211,9 @@
 	
 		let g:airline#extensions#tabline#enabled = 1
 		let g:airline_powerline_fonts = 1
-		let g:airline_theme="wombat"
+		"let g:airline_theme="wombat"
+		"let g:airline_theme="hybrid"
+		let g:airline_theme="dark"
 
 		if !exists('g:airline_symbols')
 		  let g:airline_symbols = {}
@@ -263,7 +277,8 @@
 		let g:pymode_doc_bind = 'K'
 		
 		let g:pymode_run = 1
-		let g:pymode_run_bind = '<C-c>r'
+		"let g:pymode_run_bind = '<C-c>r'
+		let g:pymode_run_bind = '<F4>'
 
 	" }
 	
@@ -275,8 +290,6 @@
 		set statusline+=%*
 
 		let g:syntastic_always_populate_loc_list = 1
-		let g:syntastic_auto_loc_list = 1
-		let g:syntastic_check_on_open = 1
 		let g:syntastic_check_on_wq = 0		
 	
 	" }
