@@ -33,20 +33,22 @@
 		Plugin 'scrooloose/nerdtree'
 		Plugin 'scrooloose/nerdcommenter'
 		Plugin 'jiangmiao/auto-pairs'
-		"Plugin 'Lokaltog/vim-powerline'
+		" Plugin 'Lokaltog/vim-powerline'
 		Plugin 'vim-airline/vim-airline'
 		Plugin 'vim-airline/vim-airline-themes'
 		Plugin 'kien/ctrlp.vim'
 		"Plugin 'Valloric/YouCompleteMe'
-		"Plugin 'tpope/vim-surround'
+		Plugin 'tpope/vim-surround'
 		Plugin 'mattn/emmet-vim'
 		Plugin 'Shougo/neocomplcache.vim'
 		Plugin 'pangloss/vim-javascript'
 		Plugin 'flazz/vim-colorschemes'
+		"Plugin 'w0ng/vim-hybrid'
 		Plugin 'yianwillis/vimcdoc'
 		Plugin 'python-mode/python-mode'
-		"Plugin 'w0ng/vim-hybrid'
-		"Plugin 'vim-syntastic/syntastic'
+		Plugin 'vim-syntastic/syntastic'
+		"Plugin 'vim-scripts/taglist.vim'
+		"Plugin 'vimcn/taglist.vim.cnx'
 		"Plugin 'yggdroot/indentline'
 
 	" }
@@ -69,8 +71,11 @@
 
 		set background=dark
 		"colorscheme wombat
+		"colorscheme welpe
+		"colorscheme wellsokai
 		"colorscheme wasabi256
 		colorscheme hybrid
+		colorscheme default
 
 		set nocp
 		filetype indent on
@@ -120,14 +125,6 @@
 
 		nmap <F2> :source $MYVIMRC<CR>
 
-		map <F10> :call Uflash()<CR>
-		func! Uflash()
-			exec "w"
-			if &filetype == 'python'
-				exec "!uflash %"
-			endif
-		endfunc
-		
 		map <F5> :call CompileRunGcc()<CR>
 		func! CompileRunGcc()
 			exec "w"
@@ -143,7 +140,7 @@
 			elseif &filetype == 'sh'
 				:!time bash %
 			elseif &filetype == 'python'
-				exec "!time python3.6 %"
+				exec "!time python3 %"
 		    	elseif &filetype == 'html'
 				exec "!firefox % &"
 		    	elseif &filetype == 'go'
@@ -152,7 +149,7 @@
 		    	"elseif &filetype == 'mkd'
 				"exec "!~/.vim/markdown.pl % > %.html &"
 				"exec "!firefox %.html &"
-		    	endif
+			endif
 		endfunc
 
 	" }
@@ -212,8 +209,7 @@
 	
 		let g:airline#extensions#tabline#enabled = 1
 		let g:airline_powerline_fonts = 1
-		"let g:airline_theme="wombat"
-		"let g:airline_theme="hybrid"
+		let g:loaded_airline_themes=1
 		let g:airline_theme="dark"
 
 		if !exists('g:airline_symbols')
@@ -291,6 +287,8 @@
 		set statusline+=%*
 
 		let g:syntastic_always_populate_loc_list = 1
+		let g:syntastic_auto_loc_list = 1
+		let g:syntastic_check_on_open = 1
 		let g:syntastic_check_on_wq = 0		
 	
 	" }

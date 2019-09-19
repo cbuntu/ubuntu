@@ -57,10 +57,10 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='\w\$ '
+    PS1='\w \$ '
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='\w\$ '
+    PS1='\w \$ '
     #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
@@ -118,33 +118,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# add swift-3.1.1 path to $PATH
-PATH=/opt/swift/swift-3.1.1/usr/bin:$PATH
-PATH=/opt/node-v6/bin:$PATH
-
-# my defined alias
 alias cls='clear'
-alias myswap=~/.bin/swap.sh
-
-alias ltmux=~/.bin/tmux.sh
-
-alias myclean=~/.bin/myclean.sh
-alias myupdate='sudo apt update'
-alias myupgrade='sudo apt upgrade'
-alias mydistupgrade='sudo apt dist-upgrade'
-
-alias vmstart=~/.bin/vmstart.sh
-alias vmclose=~/.bin/vmclose.sh
-alias vmslist=~/.bin/vmslist.sh
-alias rvmslist=~/.bin/rvmslist.sh
-
-alias ssh-ubuntu='ssh ubuntu@192.168.1.102'
-alias ssh-zcb='ssh zcb@192.168.1.102'
-
-alias ssh-arch='ssh arch@192.168.1.110'
-
-alias ssh-gui='ssh arch@192.168.1.125'
-
-alias ssh-mini='ssh ubuntu@192.168.2.105'
-
-alias ssh-freebsd='ssh freebsd@192.168.1.120'
+alias cman='man -M /usr/share/man/zh_CN'
+alias smplayer='sudo mplayer -vo fbdev2'
+alias zmplayer='sudo mplayer -vo fbdev2 -geometry 965:0 -zoom -x 400 -y 225'
+alias bmplayer='sudo mplayer -vo fbdev2 -geometry 965:0 -zoom -x 680 -y 382'
+alias books='cd ~/Downloads/books/pic'
+alias esdcv='sdcv -u en'
+alias csdcv='sdcv -u cn'
