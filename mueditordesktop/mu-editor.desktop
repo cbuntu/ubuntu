@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0.1
+Terminal=false
+Type=Application
+Icon=/home/jack/.local/lib/python3.6/site-packages/mu/resources/images/icon.png
+Name=mu-editor
+Comment=PythonEditor
+Exec=python3 -m mu -d
+StartupNotify=false
+Hidden=false
+Name[en_US]=mu
+OnkyShowIn=Unity;
+
