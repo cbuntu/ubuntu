@@ -75,7 +75,7 @@
 		"colorscheme wellsokai
 		"colorscheme wasabi256
 		colorscheme hybrid
-		colorscheme default
+		"colorscheme default
 
 		set nocp
 		filetype indent on
@@ -123,13 +123,32 @@
 
 		cmap W w !sudo tee % >/dev/null<CR>
 
-		nmap <F2> :source $MYVIMRC<CR>
+		map <C-c>d :call Debug()<CR>
+		func! Debug()
+			exec 'w'
+			if &filetype == 'python'
+				exec '!time python3.7 -m pdb %'
+			elseif &filetype == 'c'
+				exec '!gcc -g % -o %<'
+				exec '!time cgdb %<'
+			elseif &filetype == 'cpp'
+				exec '!g++ -g % -o %<'
+				exec '!time cgdb %<'
+			endif
+		endfunc
 
-		map <F5> :call CompileRunGcc()<CR>
+		map <C-c>l :call CleanTerminal()<CR>
+		func! CleanTerminal()
+			exec "w"
+			exec "!clear"
+		endfunc
+
+		"map <F5> :call CompileRunGcc()<CR>
+		map <C-c>t :call CompileRunGcc()<CR>
 		func! CompileRunGcc()
 			exec "w"
 			if &filetype == 'c'
-				exec "!g++ % -o %<"
+				exec "!gcc % -o %<"
 				exec "!time ./%<"
 			elseif &filetype == 'cpp'
 				exec "!g++ % -o %<"
@@ -140,13 +159,13 @@
 			elseif &filetype == 'sh'
 				:!time bash %
 			elseif &filetype == 'python'
-				exec "!time python3 %"
-		    	elseif &filetype == 'html'
+				exec "!time python3.7 %"
+			elseif &filetype == 'html'
 				exec "!firefox % &"
-		    	elseif &filetype == 'go'
+			elseif &filetype == 'go'
 				exec "!go build %<"
 				exec "!time go run %"
-		    	"elseif &filetype == 'mkd'
+			"elseif &filetype == 'mkd'
 				"exec "!~/.vim/markdown.pl % > %.html &"
 				"exec "!firefox %.html &"
 			endif
@@ -274,8 +293,8 @@
 		let g:pymode_doc_bind = 'K'
 		
 		let g:pymode_run = 1
-		"let g:pymode_run_bind = '<C-c>r'
-		let g:pymode_run_bind = '<F4>'
+		let g:pymode_run_bind = '<C-c>r'
+		"let g:pymode_run_bind = '<F4>'
 
 	" }
 	
