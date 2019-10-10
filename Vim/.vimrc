@@ -74,8 +74,8 @@
 		"colorscheme welpe
 		"colorscheme wellsokai
 		"colorscheme wasabi256
-		colorscheme hybrid
-		"colorscheme default
+		"colorscheme hybrid
+		colorscheme default
 
 		set nocp
 		filetype indent on
@@ -127,13 +127,13 @@
 		func! Debug()
 			exec 'w'
 			if &filetype == 'python'
-				exec '!time python3.7 -m pdb %'
+				exec '!python3.7 -m pdb %'
 			elseif &filetype == 'c'
 				exec '!gcc -g % -o %<'
-				exec '!time cgdb %<'
+				exec '!cgdb %<'
 			elseif &filetype == 'cpp'
 				exec '!g++ -g % -o %<'
-				exec '!time cgdb %<'
+				exec '!cgdb %<'
 			endif
 		endfunc
 
@@ -149,17 +149,17 @@
 			exec "w"
 			if &filetype == 'c'
 				exec "!gcc % -o %<"
-				exec "!time ./%<"
+				exec "!./%<"
 			elseif &filetype == 'cpp'
 				exec "!g++ % -o %<"
-				exec "!time ./%<"
+				exec "!./%<"
 			elseif &filetype == 'java' 
 				exec "!javac %" 
 				exec "!time java %<"
 			elseif &filetype == 'sh'
 				:!time bash %
 			elseif &filetype == 'python'
-				exec "!time python3.7 %"
+				exec "!python3.7 %"
 			elseif &filetype == 'html'
 				exec "!firefox % &"
 			elseif &filetype == 'go'
