@@ -122,8 +122,9 @@
 		set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
 		cmap W w !sudo tee % >/dev/null<CR>
+		let mapleader=","
 
-		map <C-c>d :call Debug()<CR>
+		map <leader>d :call Debug()<CR>
 		func! Debug()
 			exec 'w'
 			if &filetype == 'python'
@@ -137,14 +138,14 @@
 			endif
 		endfunc
 
-		map <C-c>l :call CleanTerminal()<CR>
+		map <leader>l :call CleanTerminal()<CR>
 		func! CleanTerminal()
 			exec "w"
 			exec "!clear"
 		endfunc
 
 		"map <F5> :call CompileRunGcc()<CR>
-		map <C-c>t :call CompileRunGcc()<CR>
+		map <leader>t :call CompileRunGcc()<CR>
 		func! CompileRunGcc()
 			exec "w"
 			if &filetype == 'c'
@@ -218,7 +219,7 @@
 	
 	" NERDTCommnet {
 
-		let mapleader=","
+		"let mapleader=","
 		let g:NERDSpaceDelims="1"
 
 	" }
@@ -293,7 +294,7 @@
 		let g:pymode_doc_bind = 'K'
 		
 		let g:pymode_run = 1
-		let g:pymode_run_bind = '<C-c>r'
+		let g:pymode_run_bind = '<leader>r'
 		"let g:pymode_run_bind = '<F4>'
 
 	" }
