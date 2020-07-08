@@ -75,7 +75,8 @@
 		"colorscheme wellsokai
 		"colorscheme wasabi256
 		"colorscheme hybrid
-		colorscheme default
+		hi VertSplit guibg=#313120 guifg=#526A83 ctermfg=black ctermbg=none term=none cterm=none gui=none
+		"colorscheme default
 
 		set nocp
 		filetype indent on
